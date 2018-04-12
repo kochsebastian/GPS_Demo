@@ -3,7 +3,7 @@ function gpsdemo()
     %hier aufnehmen einbauen
     [x, Fs] = audioread('Testaufnahme1.wav');
     
-    N = length(x)
+    N = length(x);
     time = (0:N-1)/Fs;
     
     subplot(4,1,1);
