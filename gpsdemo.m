@@ -21,6 +21,7 @@ function gpsdemo()
     c = KF(x,input(:,4));
     
     plot(time, c(end-N+1:end));
+    %test
 
 end
 
