@@ -1,5 +1,6 @@
 function gpsdemo()
     input = load('SAT_gold1023x5.txt');
+    %hier aufnehmen einbauen
     [x, Fs] = audioread('Testaufnahme1.wav');
     
     N = length(x)
@@ -21,7 +22,7 @@ function gpsdemo()
     c = KF(x,input(:,4));
     
     plot(time, c(end-N+1:end));
-    %test
+    
 
 end
 
