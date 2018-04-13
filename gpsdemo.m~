@@ -50,20 +50,20 @@ function gpsdemo()
     start = [x0;
              y0;
              t_shift];
-         
-         P_1 = c_s * time_peak1;
-        P_2 = c_s * time_peak2;
-        P_3 = c_s * time_peak3;
-        P_4 = c_s * time_peak4;
-        
     for i=0:10
     
-        L1 = sqrt((posS1(1)-start(1))^2 + ((posS1(2)-start(2))^2));
-        L2 = sqrt((posS2(1)-start(1))^2 + ((posS2(2)-start(2))^2));
-        L3 = sqrt((posS3(1)-start(1))^2 + ((posS3(2)-start(2))^2));
-        L4 = sqrt((posS4(1)-start(1))^2 + ((posS4(2)-start(2))^2));
+        L1 = sqrt((posS1(1)-)^2 + ((posS1(2)-y0)^2));
+        L2 = sqrt((posS2(1)-x0)^2 + ((posS2(2)-y0)^2));
+        L3 = sqrt((posS3(1)-x0)^2 + ((posS3(2)-y0)^2));
+        L4 = sqrt((posS4(1)-x0)^2 + ((posS4(2)-y0)^2));
 
-       
+        P_1 = c_s * (time_peak1 + t_shift);
+        P_2 = c_s * (time_peak2 + t_shift);
+        P_3 = c_s * (time_peak3 + t_shift);
+        P_4 = c_s * (time_peak4 + t_shift);
+
+
+
         A = [(x0-posS1(1))/L1 (y0-posS1(2))/L1 c_s;
              (x0-posS2(1))/L2 (y0-posS2(2))/L2 c_s;
              (x0-posS3(1))/L3 (y0-posS2(2))/L3 c_s;
