@@ -1,4 +1,7 @@
 function gpsdemo()
+    posx = 5;
+    posy =5;
+    pos = [posx,posy];
     input = load('SAT_gold1023x5.txt');
     %hier aufnehmen einbauen
     [x, Fs] = audioread('Testaufnahme1.wav');
@@ -22,7 +25,7 @@ function gpsdemo()
     c = KF(x,input(:,4));
     
     plot(time, c(end-N+1:end));
-    
+    Karte(pos);
 
 end
 
@@ -41,5 +44,5 @@ function c = KF(x,y)
         x(1,:) = [];
     end
     c = abs(c);
-    
+     
 end
